@@ -76,6 +76,7 @@ gemini-embedding-001	Document and question embeddings
 Similarity Search	Relevant chunk retrieval
 
 📁 Project Structure
+```
 DocuMind-AI/
 │
 ├── public/
@@ -97,6 +98,7 @@ DocuMind-AI/
 ├── package-lock.json
 ├── .gitignore
 └── README.md
+```
 ⚙️ How It Works
 1. Document Upload
 
