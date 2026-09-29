@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>DocuMind AI</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header class="header">
+
+        <div class="brand">
+            <div class="logo">🧠</div>
+
+            <div>
+                <h1>DocuMind AI</h1>
+                <p>Document Intelligence & Q&A</p>
+            </div>
+        </div>
+
+        
+
+    </header>
+
+
+    <!-- Main -->
+    <main class="main-container">
+
+        <!-- Left Section -->
+        <section class="documents-panel">
+
+            <div class="section-heading">
+                <div>
+                    <h2>📄 Documents</h2>
+                    <p>Upload documents to start asking questions.</p>
+                </div>
+            </div>
+
+
+            <!-- Upload Area -->
+            <div class="upload-area" id="uploadArea">
+
+                <div class="upload-icon">
+                    📤
+                </div>
+
+                <h3>Upload a document</h3>
+
+                <p>
+                    Select one or multiple PDF or TXT files
+                </p>
+
+                <input
+    type="file"
+    id="documentInput"
+    accept=".pdf,.txt"
+    multiple
+    hidden
+>
+
+                <button
+                    class="choose-btn"
+                    id="chooseBtn"
+                >
+                    Choose Files
+                </button>
+
+                <p class="file-limit">
+                    Supported formats: .pdf, .txt
+                </p>
+
+            </div>
+
+
+            <!-- Uploaded Document -->
+            <div class="uploaded-section">
+
+                <h3>Uploaded Documents</h3>
+
+                <div id="documentList">
+
+                    <div class="empty-document">
+                        No documents uploaded yet.
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- Right Section -->
+        <section class="qa-panel">
+
+            <div class="section-heading">
+
+                <div>
+                    <h2>💬 Ask Your Document</h2>
+
+                    <p>
+                        Ask questions based on your uploaded content.
+                    </p>
+                </div>
+
+            </div>
+
+
+            <!-- Question Box -->
+            <div class="question-box">
+
+                <textarea
+                    id="questionInput"
+                    placeholder="Ask something about your document..."
+                ></textarea>
+
+                <div class="question-footer">
+
+                    <span id="questionStatus">
+                        Ask a question after uploading a document.
+                    </span>
+
+                    <button
+                        id="askBtn"
+                        class="ask-btn"
+                    >
+                        Ask DocuMind →
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <!-- Answer -->
+            <div class="result-card">
+
+                <div class="result-title">
+                    <span>🤖</span>
+                    <h3>Answer</h3>
+                </div>
+
+                <div
+                    id="answer"
+                    class="result-content answer-content"
+                >
+                    Your answer will appear here.
+                </div>
+
+            </div>
+
+
+            <!-- Retrieved Context -->
+            <div class="result-card">
+
+                <div class="result-title">
+
+                    <span>📌</span>
+
+                    <h3>Retrieved Context</h3>
+
+                </div>
+
+                <div
+                    id="context"
+                    class="result-content context"
+                >
+                    Relevant document sections will appear here after retrieval.
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
